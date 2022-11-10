@@ -1,0 +1,15 @@
+.select{
+    background-color: #003597;
+    color: white;
+}
+
+.select:hover{
+    background-color: #003597dd;
+    font-weight: bold;
+    color: white !important;
+}
+
+
+.none:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}

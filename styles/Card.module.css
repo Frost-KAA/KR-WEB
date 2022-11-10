@@ -1,0 +1,18 @@
+.general{
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgb(142 154 161 / 20%);
+    margin: 20px;
+    display: inline-flex;
+    max-width: 250px;
+    border: 0px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.role{
+    text-transform: uppercase;
+}
