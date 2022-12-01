@@ -52,7 +52,7 @@ const RatingTable = ({columns, data}) => {
                   row.cells.map((cell) => {
                     colIdx += 1
                     return (
-                    <td {...cell.getCellProps()}>
+                    <td key={colIdx} {...cell.getCellProps()}>
                       {cell.render('Cell')}
                     </td>
                   )})

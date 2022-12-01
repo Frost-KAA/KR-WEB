@@ -31,7 +31,7 @@ const PlayerTable = ({columns, data}) => {
                   row.cells.map((cell) => {
                     colIdx += 1
                     return(
-                    <td className={row.cells[1] == cell ? styles.bold : styles.space} {...cell.getCellProps()}>
+                    <td key={colIdx} className={row.cells[1] == cell ? styles.bold : styles.space} {...cell.getCellProps()}>
                       {cell.render('Cell')}
                     </td>
                   )})
