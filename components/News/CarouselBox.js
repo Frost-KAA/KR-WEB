@@ -1,6 +1,7 @@
 import Carousel from "react-bootstrap/Carousel"
 import Image from "next/image";
 import styles from "../../styles/CarouselBox.module.css"
+import Link from "next/link";
 
 // const newsList = [
 //     {id:1, title:"Интрига матча", text: "Готовится к булитам", imgPath: "/assets/11.jpg"},
@@ -19,10 +20,13 @@ const CarouselBox = ({newsList}) => (
                     alt="news"
                     height={600}
                 />
+                
+                
                 <Carousel.Caption className={styles.desc}>
-                    <h2 style={{padding:0}}>{title}</h2>
+                <Link href={`/news/${pk}`}><a className={styles.a}><h2 style={{padding:0}}>{title}</h2></a></Link>
                     <p>{summary}</p>
                 </Carousel.Caption>
+                
             </Carousel.Item>
         ))}
    </Carousel>
