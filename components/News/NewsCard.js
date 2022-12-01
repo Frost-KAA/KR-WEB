@@ -7,8 +7,8 @@ const NewsCard = ({id, title, imgpath, summary, date}) => (
         
       <Card.Img variant="top" src={imgpath} height={300}/>
       <Card.Body>
-        <Link href={`/news/${id}`}>
-          <Card.Title className={styles.title}>{title}</Card.Title>
+        <Link href={`/news/${id}`} legacyBehavior>
+        <a className={styles.a}><Card.Title className={styles.title}>{title}</Card.Title></a>
         </Link>
         <Card.Text className={styles.summary} >{summary}</Card.Text>
         <Card.Text className={styles.date}>{date}</Card.Text>

@@ -9,7 +9,7 @@ const PlayerCard = ({id, name, number, imgpath, role}) => (
       <Card.Body>
         <Card.Text className={styles.number}>{number}</Card.Text>
         <Link href={`/players/${id}`}>
-          <Card.Title className={styles.name}>{name}</Card.Title>
+          <a className={styles.a}><Card.Title className={styles.name}>{name}</Card.Title></a>
         </Link>
         <Card.Text className={styles.role}>{role}</Card.Text>
         

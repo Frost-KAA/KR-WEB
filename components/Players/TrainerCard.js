@@ -8,7 +8,7 @@ const TrainerCard = ({id, name, surname, imgpath}) => (
       <Card.Img variant="top" src={imgpath} height={300}/>
       <Card.Body>
         <Link href={`/trainers/${id}`}>
-          <Card.Title className={styles.name}>{surname+" "+name}</Card.Title>
+          <a className={styles.a}><Card.Title className={styles.name}>{surname+" "+name}</Card.Title></a>
         </Link>
         <Card.Text className={styles.role}>Тренер</Card.Text>
       </Card.Body>
