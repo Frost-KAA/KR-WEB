@@ -9,7 +9,7 @@ const navigation = [
     {id:3, title:"Команда", path: "/team",
     submenu:[
         {id:6, title:"Состав", path:"/players"},
-        {id:7, title:"Тренеры", path:"/coaches"}
+        {id:7, title:"Тренеры", path:"/trainers"}
     ]},
     {id:4, title:"Расписание", path: "/schedule"},
     {id:5, title:"Турнирная таблица", path: "/table"}

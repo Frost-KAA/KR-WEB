@@ -14,7 +14,7 @@ const RatingTable = ({columns, data}) => {
   } = useTable({columns, data})
 
   return(
-    <Table striped {...getTableProps()}>
+    <Table striped {...getTableProps()} className={styles.table}>
       <thead>
         {
           headerGroups.map(headerGroup => (

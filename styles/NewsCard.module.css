@@ -1,0 +1,33 @@
+.general{
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgb(142 154 161 / 20%);
+    margin: 20px;
+    display: inline-flex;
+    max-width: 250px;
+    border: 0px;
+    border-radius: 2px;
+    text-align: center;
+    position: relative;
+}
+
+.title{
+    margin: 5px;
+    text-align: left;
+}
+
+.summary{
+    margin: 5px;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.date{
+    color: rgb(133, 131, 131);
+    margin: 5px;
+    margin-top: 10px;
+    font-size: 10px;
+    text-align: left;
+    bottom: 3%;
+    position: absolute;
+}

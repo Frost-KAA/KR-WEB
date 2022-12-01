@@ -1,0 +1,26 @@
+.general{
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgb(142 154 161 / 20%);
+    margin: 10px;
+    border: 0px;
+    border-radius: 2px;
+    padding: 20px 50px;
+    
+}
+
+.title{
+    font-size: 18px;
+}
+
+.date{
+    color: white;
+    padding: 5px 10px;
+    background-color: #003597;
+    font-weight: bold;
+   
+    
+}
+
+.dateFon{
+    display: inline-block;
+}

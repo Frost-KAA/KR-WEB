@@ -1,0 +1,43 @@
+.general{
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgb(142 154 161 / 20%);
+    margin: 10px 40px;
+    border: 0px;
+    border-radius: 2px;
+    padding: 20px 50px;
+    display:flex;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px 10px 20px 10px;
+    text-align: center;
+}
+
+.table{
+    padding: 20px;
+    width: 80%;
+    margin: 0px 40px 10px 40px;
+}
+
+.number{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 5px;
+    border-radius: 30px;
+    background-color: #4374d0;
+    color: white;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    padding-top: 12px;
+    box-shadow: 0 2px 4px 0 rgb(142 154 161 / 20%);
+}
+
+.box{
+    position: relative;
+}

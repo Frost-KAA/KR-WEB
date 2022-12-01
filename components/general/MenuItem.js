@@ -14,7 +14,7 @@ const MenuItem = ({item}) => {
                 {item.submenu.map((sub) => (
                     <NavDropdown.Item key={sub.id} className={styles.navItem}>
                         <Link key={sub.id} href={sub.path}>
-                            <a className={pathname === sub.path ? styles.active : styles.none}>{sub.title}</a>
+                            <a className={pathname === sub.path ? styles.subactive : styles.subnone}>{sub.title}</a>
                         </Link>
                     </NavDropdown.Item>
                 ))}

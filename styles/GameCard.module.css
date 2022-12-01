@@ -1,0 +1,77 @@
+.li{
+    list-style-type: none;
+    background-color: white;
+    margin: 10px 40px;
+    box-shadow: 0 2px 4px 0 rgb(142 154 161 / 20%);
+    border-radius: 2px;
+    padding: 15px;
+    display: flex;
+}
+
+.team{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    flex-basis: 190px;
+    text-align: center;
+}
+
+.score{
+    font-size: 32px;
+    font-weight: bold;
+    color: #003597;
+    padding: 0px 20px;
+    text-align: center;
+
+}
+
+.date{
+    font-size: 18px;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    color: #003597;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dateHome{
+    font-size: 18px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    background-color: #003597;
+    border-radius: 2px;
+    text-align: center;
+    margin: 0 40px;
+}
+
+.div1, .div2, .div3{
+    align-items:center;
+}
+
+.div1, .div3{
+    flex-basis: 25%;
+    align-items: center;
+    
+}
+
+.div2{
+    display: flex;
+    flex-basis: 50%;
+    align-items:center;
+}
+
+
+.location{
+    font-size: 18px;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.li:hover{
+    box-shadow: 4px 10px 20px 10px rgba(142, 154, 161, 0.068);
+}

@@ -1,6 +1,10 @@
 .general{
     background-color: white;
-    margin: 10px;
+    margin: 10px 40px;
     box-shadow: 0 2px 4px 0 rgb(142 154 161 / 20%);
     padding: 15px;
+}
+
+.table{
+    margin: 5px 30px;
 }

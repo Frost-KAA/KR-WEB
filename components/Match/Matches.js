@@ -1,10 +1,10 @@
 import Match from "./Match";
 import styles from "../../styles/Matches.module.css"
 
-const Matches = () => (
+const Matches = ({matches}) => (
     <div className={styles.general}>
-        <Match title="Предыдущий матч" date="21.10.2022" team1="Импульс" team2="Викинг" count1="3" count2="4" place="Платинум Арена" />
-        <Match title="Следующий матч" date="03.11.2022" team1="Импульс" team2="Пульсар" count1="-" count2="-" place="Платинум Арена" />
+        <Match title="Предыдущий матч" date={matches[0].date} team1={matches[0].homeTeam} team2={matches[0].awayTeam} count1={matches[0].homeScore} count2={matches[0].awayScore} place={matches[0].location} />
+        <Match title="Следующий матч" date={matches[1].date} team1={matches[1].homeTeam} team2={matches[1].awayTeam} count1="-" count2="-" place={matches[1].location} />
     </div>
 );
 

@@ -1,10 +1,10 @@
 import Head from "next/head";
-import NewsCard from "../../components/News/NewsCard";
+import TrainerCard from "../../components/Players/TrainerCard";
 import Heading from "../../components/general/Heading";
 import styles from "../../styles/NewsPage.module.css"
 
 export const getStaticProps = async() =>{
-  const response = await fetch('https://qwmks.pythonanywhere.com/api/news')
+  const response = await fetch('https://qwmks.pythonanywhere.com/api/coaches')
   const data = await response.json()
 
   if (!data){
@@ -15,28 +15,28 @@ export const getStaticProps = async() =>{
 
   return{
     props: {
-      news: data
+      trainers: data
     }
   }
 }
 
 
-const NewsPage = ({news})  => {
+const TrainersPage = ({trainers})  => {
 
   return (
       <div>
         <Head>
-          <title>Новости</title>
-          <meta name="NewsEntity" content="NewsEntity" />
+          <title>Игроки</title>
+          <meta name="Trainers" content="Trainers" />
           <link rel="icon" href="/logo.png" />
         </Head>
 
         <main>
-          <Heading title="Новости" />
+          <Heading title="Тренеры" />
 
           <div className={styles.list}>
-            {news && news.map(({pk, title, summary, photo, date}) => (
-                <NewsCard id={pk} title={title} summary={summary} imgpath={photo} date={date} />
+            {trainers && trainers.map(({pk, name, surname, desc, photo}) => (
+                <TrainerCard id={pk} name={name} surname={surname} desc={desc} imgpath={photo} />
             ))}
           </div>
 
@@ -45,4 +45,4 @@ const NewsPage = ({news})  => {
   );
 };
 
-export default NewsPage;
+export default TrainersPage;

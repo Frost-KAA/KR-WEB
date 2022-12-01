@@ -1,5 +1,6 @@
-.general{
+.list{
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0px 20px;
 }

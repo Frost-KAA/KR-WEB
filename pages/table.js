@@ -2,7 +2,26 @@ import Head from "next/head";
 import Heading from "../components/general/Heading";
 import Rating from "../components/RatingTable/Rating";
 
-const TablePage = ()  => (
+export const getStaticProps = async() =>{
+
+  const response_table = await fetch('https://qwmks.pythonanywhere.com/api/table')
+  const data_table = await response_table.json()
+
+
+  if (!data_table){
+    return{
+      notFound: true
+    }
+  }
+
+  return{
+    props: {
+      table: data_table
+    }
+  }
+}
+
+const TablePage = ({table})  => (
     <div>
       <Head>
         <title>Рейтинговая таблица</title>
@@ -11,8 +30,8 @@ const TablePage = ()  => (
       </Head>
 
       <main>
-        <Heading title="Турнирная таблица" />
-        <Rating title="" />
+        <Heading title="Турнирная таблица"/>
+        <Rating title="" table={table} full={1} />
       </main>
     </div>
 );

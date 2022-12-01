@@ -21,7 +21,15 @@
     color: white;
 }
 
-.none, .active{
+.subnone:hover, .subactive:hover {
+    color: #011f56;
+}
+
+.subnone, .subactive{
+    width: 100%;
+}
+
+.none, .active, .subactive, .subnone{
     height: 100%;
     display: inline-flex;
     align-items: center;
@@ -48,14 +56,18 @@
     font-weight: bold;
     text-decoration: none;
     font-size: 16px;
-    background-color: rgb(206, 62, 88);
 }
 
 
 .navItem{
-    background-color: rgb(0, 53, 151, 0.5);
+    background-color: #011f56;
+    padding: 0px;
+}
+
+.navItem:hover{
+    color: #011f56;
 }
 ul.dropdown-menu {
     padding: 0px 0px;
-    color: rgb(0, 53, 151, 0.5);
+    color: #011f56;
 }

@@ -13,3 +13,16 @@
 .none:hover{
     background-color: rgba(0, 0, 0, 0.2);
 }
+
+.space{
+    padding: 8px 40px !important;
+}
+
+.bold{
+    font-weight: bold;
+    padding: 8px 40px !important;
+}
+
+.table{
+    text-align: center;
+}

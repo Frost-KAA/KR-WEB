@@ -1,64 +1,104 @@
 import RatingTable from "./RatingTable";
 import styles from "../../styles/Rating.module.css"
 
-const Rating = ({title}) => {
+const Rating = ({title, table, full}) => {
 
-    const columns = [
+  let data = []
+
+  let columns = []
+
+  if (full == 1){
+    columns = [
+      {
+        Header: "Место",
+        accessor: "num",
+      },
+      {
+        Header: "Команда",
+        accessor: "team",
+      },
+      {
+        Header: "Игры",
+        accessor: "games",
+      },
+      {
+        Header: "Победы",
+        accessor: "wins",
+      },
+      {
+        Header: "Победы по буллитам",
+        accessor: "wb",
+      },
+      {
+        Header: "Проигрыши по булитам",
+        accessor: "pb",
+      },
+      {
+        Header: "Проигрыши",
+        accessor: "p",
+      },
+      {
+        Header: "Шайбы",
+        accessor: "gd",
+      },
+      {
+        Header: "Очки",
+        accessor: "pts",
+      },
+    ];
+
+    data = table
+  
+    let pk = 1
+    while (pk <= data.length) {
+      data[pk-1]["num"] = pk
+      pk += 1
+    }
+  
+  }
+  else{
+    columns = [
+      {
+        Header: "Место",
+        accessor: "num",
+      },
+      {
+        Header: "Команда",
+        accessor: "team",
+      },
+      {
+        Header: "Игры",
+        accessor: "games",
+      },
+      {
+        Header: "Очки",
+        accessor: "pts",
+      },
+    ];
+
+    let pk = 1
+
+    table.map(({ team, games, pts}) => {
+      data.push(
         {
-          Header: "Место",
-          accessor: "num",
-        },
-        {
-          Header: "Команда",
-          accessor: "team",
-        },
-        {
-          Header: "Игры",
-          accessor: "games",
-        },
-        {
-          Header: "Очки",
-          accessor: "score",
-        },
-      ];
-      
-      const data = [
-        {
-          num: 1,
-          team: "Викинг",
-          games: 10,
-          score: 23
-        },
-        {
-          num: 2,
-          team: "Совы",
-          games: 10,
-          score:  19
-        },
-        {
-          num: 3,
-          team: "Ресурс",
-          games: 10,
-          score: 17
-        },
-        {
-          num: 4,
-          team: "Импульс",
-          games: 10,
-          score: 12
-        },
-        {
-          num: 5,
-          team: "Пульсар",
-          games: 10,
-          score: 8
-        },
-      ];
+          num: pk,
+          team: team,
+          games: games,
+          pts: pts
+        }
+      )
+      pk += 1
+    })
+  }
+
+
 
     return(
         <div className={styles.general}>
-            <h2>{title}</h2>
-            <RatingTable columns={columns} data={data} />
+            <div className={styles.table}>
+              <RatingTable columns={columns} data={data} />
+            </div>
+            
         </div>
     );
 };

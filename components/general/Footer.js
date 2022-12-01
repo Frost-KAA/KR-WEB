@@ -1,6 +1,6 @@
 const Footer = () => (
     <footer>
-        <h2>Created by Anastasia Kochetkova & Maksim Kravets</h2>
+        <h4>Created by Anastasia Kochetkova & Maksim Kravets</h4>
     </footer>
 );
 

@@ -1,7 +1,7 @@
 .general{
     background-color: white;
     box-shadow: 0 2px 4px 0 rgb(142 154 161 / 20%);
-    margin: 10px;
+    margin: 20px;
     display: inline-flex;
     max-width: 250px;
     border: 0px;
@@ -14,16 +14,25 @@
     margin: 5px;
 }
 
-.score{
+.number{
     text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
     margin: 5px;
-    font-size: 12px;
+    border-radius: 30px;
+    background-color: #4374d0;
+    color: white;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    padding-top: 12px;
+    box-shadow: 0 2px 4px 0 rgb(142 154 161 / 20%);
 }
 
 .role{
     text-transform: uppercase;
-    font-weight: bold;
     padding: 5px;
     margin: 0px;
-    border-bottom: 2px solid #1556cf;
 }
