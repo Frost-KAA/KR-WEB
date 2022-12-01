@@ -1,9 +1,4 @@
 .general{
-    margin: 20px;
-    background-color: white;
-}
-
-.list{
     display: grid;
     place-items: center;
     gap: 5px;
