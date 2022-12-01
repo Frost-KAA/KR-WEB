@@ -7,33 +7,45 @@ import Vote from '../components/Vote';
 import Heading from '../components/general/Heading';
 
 export const getStaticProps = async() =>{
-  const response_news = await fetch('https://qwmks.pythonanywhere.com/api/news')
-  const data_news = await response_news.json()
+  try{
+    const response_news = await fetch('https://qwmks.pythonanywhere.com/api/news')
+    const data_news = await response_news.json()
 
-  const response_leders = await fetch('https://qwmks.pythonanywhere.com/api/leaders')
-  const data_leaders = await response_leders.json()
+    const response_leders = await fetch('https://qwmks.pythonanywhere.com/api/leaders')
+    const data_leaders = await response_leders.json()
 
-  const response_matches = await fetch('https://qwmks.pythonanywhere.com/api/nearestMatches')
-  const data_matches = await response_matches.json()
+    const response_matches = await fetch('https://qwmks.pythonanywhere.com/api/nearestMatches')
+    const data_matches = await response_matches.json()
 
-  const response_table = await fetch('https://qwmks.pythonanywhere.com/api/table')
-  const data_table = await response_table.json()
+    const response_table = await fetch('https://qwmks.pythonanywhere.com/api/table')
+    const data_table = await response_table.json()
 
 
-  if ((!data_news) || (!data_leaders) || (!data_matches) || (!data_table)){
+    if ((!data_news) || (!data_leaders) || (!data_matches) || (!data_table)){
+      return{
+        notFound: true
+      }
+    }
+
     return{
-      notFound: true
+      props: {
+        news: data_news,
+        leaders: data_leaders,
+        matches: data_matches,
+        table: data_table
+      }
+    }
+  } catch{
+    return{
+      props: {
+        news: null,
+        leaders: null,
+        matches: null,
+        table: null
+      }
     }
   }
-
-  return{
-    props: {
-      news: data_news,
-      leaders: data_leaders,
-      matches: data_matches,
-      table: data_table
-    }
-  }
+  
 }
 
 const HomePage = ({news, leaders, matches, table})  => (
