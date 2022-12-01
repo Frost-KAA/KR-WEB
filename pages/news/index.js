@@ -36,7 +36,7 @@ const NewsPage = ({news})  => {
 
           <div className={styles.list}>
             {news && news.map(({pk, title, summary, photo, date}) => (
-                <NewsCard id={pk} title={title} summary={summary} imgpath={photo} date={date} />
+                <NewsCard key={pk} id={pk} title={title} summary={summary} imgpath={photo} date={date} />
             ))}
           </div>
 
