@@ -35,7 +35,7 @@ const Leaders = ({leaders}) => {
                     }
                     idx += 1
                     return (
-                        <LeaderCard id={pk} title={title} name={name} goals={goals} assists={assists} imgpath={photo} />
+                        <LeaderCard key={pk} id={pk} title={title} name={name} goals={goals} assists={assists} imgpath={photo} />
                     )
                 }
                 )}

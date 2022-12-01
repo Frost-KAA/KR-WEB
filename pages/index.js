@@ -3,7 +3,6 @@ import News from '../components/News/News';
 import Matches from '../components/Match/Matches';
 import Rating from '../components/RatingTable/Rating';
 import Leaders from '../components/Leaders/Leaders';
-import Vote from '../components/Vote';
 import Heading from '../components/general/Heading';
 
 export const getStaticProps = async() =>{

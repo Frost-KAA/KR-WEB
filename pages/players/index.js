@@ -36,7 +36,7 @@ const PlayersPage = ({players})  => {
 
           <div className={styles.list}>
             {players && players.map(({pk, name, number, photo, role}) => (
-                <PlayerCard id={pk} name={name} number={number} imgpath={photo} role={role} />
+                <PlayerCard key={pk} id={pk} name={name} number={number} imgpath={photo} role={role} />
             ))}
           </div>
 

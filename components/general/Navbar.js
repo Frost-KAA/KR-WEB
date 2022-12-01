@@ -16,16 +16,18 @@ const navigation = [
 ]
 
 const Navbar = () => {
-
+    let idx = 0;
     return(
             <nav className={styles.nav}>
                 <div className={styles.logo}>
                     <Image src="/logo.png" width="50" height="50" alt="logo"/>
                 </div>
                 <div className={styles.links}>
-                    {navigation.map((menu) => (
-                        <MenuItem  item={menu} />
-                    ))}
+                    {navigation.map((menu) => {
+                        idx += 1
+                        return(
+                        <MenuItem key={idx} item={menu} />
+                    )})}
                 </div>
             </nav>
     )

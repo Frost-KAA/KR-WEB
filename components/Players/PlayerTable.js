@@ -5,6 +5,9 @@ import { useTable } from "react-table";
 
 const PlayerTable = ({columns, data}) => {
 
+  let rowIdx = 0; 
+  let colIdx = 0;
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -20,17 +23,22 @@ const PlayerTable = ({columns, data}) => {
         {
           rows.map((row) => {
             prepareRow(row)
+            rowIdx += 1
+            colIdx = 0;
             return (
-              <tr className={styles.none} {...row.getRowProps()}>
+              <tr className={styles.none} {...row.getRowProps()} key={rowIdx}>
                 {
-                  row.cells.map((cell) => (
+                  row.cells.map((cell) => {
+                    colIdx += 1
+                    return(
                     <td className={row.cells[1] == cell ? styles.bold : styles.space} {...cell.getCellProps()}>
                       {cell.render('Cell')}
                     </td>
-                  ))
+                  )})
                 }
               </tr>
             )
+            
           })
         }
       </tbody>

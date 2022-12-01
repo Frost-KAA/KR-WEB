@@ -36,7 +36,7 @@ const TrainersPage = ({trainers})  => {
 
           <div className={styles.list}>
             {trainers && trainers.map(({pk, name, surname, desc, photo}) => (
-                <TrainerCard id={pk} name={name} surname={surname} desc={desc} imgpath={photo} />
+                <TrainerCard key={pk} id={pk} name={name} surname={surname} desc={desc} imgpath={photo} />
             ))}
           </div>
 
